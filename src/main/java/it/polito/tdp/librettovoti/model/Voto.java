@@ -11,7 +11,7 @@ import java.time.LocalDate;
  * @author Silvio
  *
  */
-public class Voto {
+public class Voto implements Comparable<Voto>{
 
 	private String nome;
 	private int voto; //30L come lo rappresento?
@@ -66,6 +66,13 @@ public class Voto {
 	public String toString() {
 		return "Esame "+ nome +" superato con " + voto + " il " + data;
 	}
+
+
+	@Override
+	public int compareTo(Voto a) {
+		return this.nome.compareTo(a.nome);
+	}
+	
 	
 	
 	
